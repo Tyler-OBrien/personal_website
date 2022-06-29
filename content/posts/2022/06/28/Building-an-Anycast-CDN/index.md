@@ -103,11 +103,9 @@ After that, latency looks a bit better:
 ![BunnyCDN Test](bunnycdn-test.png)
 
 
-The location you are currently accessing this page from is:
-
+The Anycast location you hit is:
 
 {{< requestLocation >}}
-
 
 
 There is a ton of tools that can be used to try to optimize Anycast networks. RIPE Atlas is one of the best tools, measuring performance not just from a Datacenter to you, but from actual consumer ISPs, thanks to people who have set up probes of their own in all sorts of networks.
@@ -138,4 +136,4 @@ https://lg.ring.nlnog.net/prefix_bgpmap/lg01/ipv6?q=2a0f:85c1:260::1
 
 There's still lots for me to learn about BGP, Anycast networks, and optimizing these routes, but it's really cool to see how Anycast works and how to optimize it.
 
-If you're curious the tech stack of this website, see [Building a Cloudflare Pages Clone ]({{< ref "posts/2022/06/29/building-a-cloudflare-pages-clone" >}} "How I build a Cloudflare Pages Clone, including DNS").
+If you're curious the tech stack of this website (tobrien.me), see [Building a Cloudflare Pages Clone ]({{< ref "posts/2022/06/29/building-a-cloudflare-pages-clone" >}} "How I build a Cloudflare Pages Clone, including DNS").

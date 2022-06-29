@@ -15,12 +15,13 @@ Hi! I'm Tyler O'Brien, a developer located in the Upstate New York region. I'm c
 
 You can read more about some of my [Projects]({{< ref "/projects" >}} "My Projects"), and [blog posts]({{< ref "/posts" >}} "My Blog Posts").
 
-This website is hosted via [CouchDB Pages](https://github.com/Tyler-OBrien/CouchDB-Pages) on a cluster of virtual private servers from a few different providers. Routing is handled via [Anycast]({{< ref "/posts/2022/06/28/building-an-anycast-cdn" >}} "My Anycast Network").
+[tobrien.me](https://tobrien.me) is hosted via [CouchDB Pages](https://github.com/Tyler-OBrien/CouchDB-Pages) on a cluster of virtual private servers from a few different providers. Routing is handled via [Anycast]({{< ref "/posts/2022/06/28/building-an-anycast-cdn" >}} "My Anycast Network"). Both DNS and HTTP is done on these machines, no third party providers.
 
-The location you are currently accessing this page from is:
-
+The Anycast location you would hit is:
 
 {{< requestLocation >}}
 
+
+[tylerobrien.dev](https://tylerobrien.dev) is the same website, hosted on Cloudflare Pages. Using Cloudflare for DNS as well.
 
 This website was build using [Hugo](https://gohugo.io/), and [Congo](https://git.io/hugo-congo), a Hugo theme.
