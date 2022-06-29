@@ -7,6 +7,8 @@ showReadingTime: false
 showTableOfContents: true
 sharingLinks: false
 layout: "simple"
+summary: "About me"
+date: 2022-06-28
 ---
 
 Hi! I'm Tyler O'Brien, a developer located in the Upstate New York region. I'm currently interested in Cloudflare's ecosystem, including Workers, D1, Durable Objects, Workers Analytics Engine, and more. I've been a part of a few game server communities in the past, and have used C# and .NET's Ecosystem  extensively. I hope to learn languages like Rust in the future. I am currently aiming for a Bachelor's in CS, and already have my associates.

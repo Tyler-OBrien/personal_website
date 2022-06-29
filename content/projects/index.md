@@ -7,6 +7,8 @@ showReadingTime: false
 showTableOfContents: true
 sharingLinks: false
 layout: "simple"
+summary: "My Projects"
+date: 2022-06-28
 ---
 
 
