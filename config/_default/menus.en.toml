@@ -1,0 +1,28 @@
+
+[[main]]
+  name = "Posts"
+  pageRef = "posts"
+  url = "/posts"
+  weight = 10
+
+[[main]]
+  name = "Projects"
+  pageRef = "projects"
+  url = "/projects"
+  weight = 20
+
+
+
+[[main]]
+  name = "GitHub"
+  url = "https://github.com/Tyler-OBrien"
+  weight = 30
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  url = "/about"
+  weight = 40
+
+
+  

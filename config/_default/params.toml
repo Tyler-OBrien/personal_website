@@ -1,0 +1,41 @@
+#colorScheme = "ocean"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+showAppearanceSwitcher = true
+showThemeAttribution = false
+enableSearch = true
+enableCodeCopy = true
+showScrollToTop = true
+
+
+[header]
+  layout = "basic" # valid options: basic, hamburger, custom
+
+[footer]
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+  showThemeAttribution = false
+
+[homepage]
+  layout = "profile" 
+  showRecent = true
+
+[article]
+  showDate = true
+  showDateUpdated = false
+  showAuthor = false
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  sharingLinks = ["twitter", "reddit", "linkedin", "email"]
+  showComments = true
+
+
+
+
+
+[taxonomy]
+  showTermCount = true

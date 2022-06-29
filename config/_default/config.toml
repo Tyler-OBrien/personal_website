@@ -1,0 +1,6 @@
+languageCode = "en"
+
+
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
