@@ -5,6 +5,7 @@ description = ""
 [author]
 name = "Tyler O'Brien"
 headline = "Software Developer"
+image = "avatar.png"
 bio = "Mostly focused on backend development, trying to keep up with the latest technologies."
   links = [
     { linkedin = "https://linkedin.com/in/Tyler-Obrien-cs" },

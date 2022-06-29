@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Bitter
+- Font Author: Copyright 2011 The Bitter Project Authors (https://github.com/solmatas/BitterPro)
+- Font Source: http://fonts.gstatic.com/s/bitter/v28/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfCL_EXFh2reU.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
