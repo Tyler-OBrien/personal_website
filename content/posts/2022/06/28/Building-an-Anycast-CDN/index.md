@@ -5,6 +5,8 @@ date: 2022-06-28
 draft: false
 showTableOfContents: true
 showComments: true
+showSummary: true
+summary: "Looking into how to build an Anycast Network on a budget, and optimizing Anycast routing."
 ---
 
 Cloudflare is expanding at a rapid pace, with more and more offerings built upon their Anycast Network.
