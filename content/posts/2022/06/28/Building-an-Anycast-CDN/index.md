@@ -4,6 +4,7 @@ slug: Building-An-Anycast-CDN
 date: 2022-06-28
 draft: false
 showTableOfContents: true
+showComments: true
 ---
 
 Cloudflare is expanding at a rapid pace, with more and more offerings built upon their Anycast Network.

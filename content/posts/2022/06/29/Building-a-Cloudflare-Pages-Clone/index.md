@@ -4,6 +4,7 @@ slug: Building-A-Cloudflare-Pages-Clone
 date: 2022-06-29
 draft: false
 showTableOfContents: true
+showComments: true
 ---
 
 Github Pages, or Cloudflare Pages, are both great offerings for static sites that offer good integration with CI/CD and good performance. Cloudflare Pages specifically is built on top of Cloudflare's Workers KV Store, allowing your website, if popular enough, to exist in every one of Cloudflare's 350+ Datacenters, all for free.

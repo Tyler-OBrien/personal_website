@@ -6,7 +6,7 @@ showThemeAttribution = false
 enableSearch = true
 enableCodeCopy = true
 showScrollToTop = true
-
+showComments = false
 
 [header]
   layout = "basic" # valid options: basic, hamburger, custom
@@ -31,7 +31,7 @@ showScrollToTop = true
   invertPagination = false
   showReadingTime = true
   sharingLinks = ["twitter", "reddit", "linkedin", "email"]
-  showComments = true
+  showComments = false
 
 
 

@@ -6,6 +6,7 @@ showDateUpdated: false
 showReadingTime: false
 showTableOfContents: true
 sharingLinks: false
+layout: "simple"
 ---
 
 

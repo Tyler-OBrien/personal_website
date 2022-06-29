@@ -1,0 +1,18 @@
+{{ $jsCommentAppearanceSwitcher := resources.Get "js/commentAppearanceSwitcher.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script defer type="text/javascript" src="{{ $jsCommentAppearanceSwitcher.RelPermalink }}" integrity="{{ $jsCommentAppearanceSwitcher.Data.Integrity }}"></script>
+
+<script src="https://giscus.app/client.js"
+        data-repo="Tyler-OBrien/personal_website"
+        data-repo-id="R_kgDOHk9MFA"
+        data-category="Posts"
+        data-category-id="DIC_kwDOHk9MFM4CP76l"
+        data-mapping="og:title"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
