@@ -1,4 +1,4 @@
-name: couchdb_deploy
+name: couchdb_pages_deploy
 
 on:
   push:
@@ -12,14 +12,19 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       name: Checkout Repository
-    - name: Log
-      run: echo ${{ github.ref_name }}
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+          # extended: true
+    - name: Build
+      run: hugo --minify
     - name: change file permissions
       run: chmod +x utils/CouchDB-Pages-Uploader
     - name: Upload
       run: utils/CouchDB-Pages-Uploader
       env:
-        UPLOAD_DIRECTORY: "src"
+        UPLOAD_DIRECTORY: "public"
         HOSTNAME: "tobrien.me"
         API_KEY: ${{ secrets.API_KEY }}
         SERVER_URL: "https://tobrien.me"
