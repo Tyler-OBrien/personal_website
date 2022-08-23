@@ -15,7 +15,7 @@ Hi! I'm Tyler O'Brien, a developer located in the Upstate New York region. I'm c
 
 You can read more about some of my [Projects]({{< ref "/projects" >}} "My Projects"), and [blog posts]({{< ref "/posts" >}} "My Blog Posts").
 
-[tobrien.me](https://tobrien.me) is hosted via [CouchDB Pages](https://github.com/Tyler-OBrien/CouchDB-Pages) on a cluster of virtual private servers from a few different providers. Routing is handled via [Anycast]({{< ref "/posts/2022/06/28/building-an-anycast-cdn" >}} "My Anycast Network"). Both DNS and HTTP is done on these machines, no third party providers.
+[tobrien.dev](https://tobrien.dev) is hosted via [CouchDB Pages](https://github.com/Tyler-OBrien/CouchDB-Pages) on a cluster of virtual private servers from a few different providers. Routing is handled via [Anycast]({{< ref "/posts/2022/06/28/building-an-anycast-cdn" >}} "My Anycast Network"). Both DNS and HTTP is done on these machines, no third party providers.
 
 The Anycast location you would hit is:
 

@@ -127,7 +127,7 @@ https://atlas.ripe.net/measurements/41692485/#map
 
 https://bgp.tools/prefix/2a0f:85c1:260::/48#connectivity
 
-https://tools.bunny.net/latency-test?query=tobrien.me
+https://tools.bunny.net/latency-test?query=tobrien.dev
 
 https://lg.ring.nlnog.net/prefix_bgpmap/lg01/ipv6?q=2a0f:85c1:260::1
 
@@ -136,4 +136,4 @@ https://lg.ring.nlnog.net/prefix_bgpmap/lg01/ipv6?q=2a0f:85c1:260::1
 
 There's still lots for me to learn about BGP, Anycast networks, and optimizing these routes, but it's really cool to see how Anycast works and how to optimize it.
 
-If you're curious the tech stack of this website (tobrien.me), see [Building a Cloudflare Pages Clone ]({{< ref "posts/2022/06/29/building-a-cloudflare-pages-clone" >}} "How I build a Cloudflare Pages Clone, including DNS").
+If you're curious the tech stack of this website (tobrien.dev), see [Building a Cloudflare Pages Clone ]({{< ref "posts/2022/06/29/building-a-cloudflare-pages-clone" >}} "How I build a Cloudflare Pages Clone, including DNS").

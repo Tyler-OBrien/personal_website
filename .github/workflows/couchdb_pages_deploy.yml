@@ -25,7 +25,7 @@ jobs:
       run: utils/CouchDB-Pages-Uploader
       env:
         UPLOAD_DIRECTORY: "public"
-        HOSTNAME: "tobrien.me"
+        HOSTNAME: "tobrien.dev"
         API_KEY: ${{ secrets.API_KEY }}
-        SERVER_URL: "https://tobrien.me"
+        SERVER_URL: "https://tobrien.dev"
         BRANCH_NAME: ${{ github.ref_name }}
