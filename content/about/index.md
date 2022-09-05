@@ -39,6 +39,6 @@ A list of my domains:
 | [anexample.work](https://anexample.work) | Website for Testing | [Porkbun](https://porkbun.com/) | Cloudflare: [DNS](https://www.cloudflare.com/dns/) + [Workers](https://workers.cloudflare.com/) |  | Random Tests on Alt. CF Acct
 | [wherecaniwatchanime.com](https://wherecaniwatchanime.com) | Long Abandoned | [Cloudflare](https://www.cloudflare.com/products/registrar/) | Cloudflare: [DNS](https://www.cloudflare.com/dns/) + [Pages](https://pages.cloudflare.com/) | [Gatsby](https://www.gatsbyjs.com/) | Indexable Pages for Anime Sites
 
-
+Sleek Public Status Page I use for monitoring: https://status.tylerobrien.dev. Datadog also has a really nice student plan part of Github Student, which I use for APM, Host Monitoring and Synthetic Monitoring for DNS / HTTPS.
 
 Email handled by [Fastmail](https://www.fastmail.com/). Some of the extra domains (tylerobrien.org, wherecaniwatchanime.com), have their inbound mail handled by [Cloudflare Email Routing](https://www.cloudflare.com/products/email-routing/)
