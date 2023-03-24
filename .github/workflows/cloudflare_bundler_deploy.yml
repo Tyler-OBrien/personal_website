@@ -19,7 +19,9 @@ jobs:
     - name: Build
       run: hugo --minify
     - name: Cd
-      run: cd .bundler
+      run: cd bundler
+    - name: ls
+      run: ls && pwd
     - name: change file permissions
       run: chmod +x CloudflareWorkerBundler
     - name: Upload
