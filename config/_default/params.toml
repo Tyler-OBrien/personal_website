@@ -22,7 +22,7 @@ showComments = false
   showDate = true
   showDateUpdated = false
   showAuthor = false
-  showBreadcrumbs = tru
+  showBreadcrumbs = true
   showDraftLabel = true
   showHeadingAnchors = true
   showPagination = true
@@ -30,7 +30,6 @@ showComments = false
   showReadingTime = true
   sharingLinks = [ ]
   showComments = false
-
 
 
 
