@@ -1,0 +1,33 @@
+{
+    "BundleDirectory": "../public",
+    "Router": "Vanilla",
+    "OutputLocation": "tyler-obrien-embedded/worker.js",
+    "MaxManifestCount": 3,
+    "StorageConfigurations": [
+        {
+            "Type": "Embedded",
+            "AllowedFileExtensions": [
+                "html",
+                "css",
+                "js"
+            ],
+            "FileSizeLimit": 200000
+        },
+        {
+            "Type": "KV",
+            "FileSizeLimit": 10000000,
+            "NamespaceId": "c91401bbc81c415e9d18950bc50adf7a",
+            "BindingName": "KV"
+        },
+        {
+            "Type": "R2",
+            "BucketName": "main-tyler-obrien-website",
+            "BindingName": "R2"
+        },
+    ],
+    "ManifestStorageConfiguration": {
+        "Type": "R2",
+        "BucketName": "main-tyler-obrien-website-manifest",
+        "BindingName": "Manifest"
+    }
+}

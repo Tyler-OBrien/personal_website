@@ -1,0 +1,12 @@
+name = "tyler-obrien-embedded"
+main = "worker.js"
+compatibility_date = "2023-03-23"
+account_id = "b9e510810e1e12fcd40826d266a1fb12"
+
+kv_namespaces = [
+  { binding = "KV", id = "c91401bbc81c415e9d18950bc50adf7a", preview_id = "c91401bbc81c415e9d18950bc50adf7a" }
+]
+
+r2_buckets = [
+  { binding = 'R2', bucket_name = 'main-tyler-obrien-website', preview_bucket_name = 'main-tyler-obrien-website' }
+]
