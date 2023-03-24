@@ -1,11 +1,9 @@
 #colorScheme = "ocean"
 defaultAppearance = "light"
 autoSwitchAppearance = true
-showAppearanceSwitcher = true
 showThemeAttribution = false
 enableSearch = true
 enableCodeCopy = true
-showScrollToTop = true
 showComments = false
 
 [header]
@@ -24,13 +22,13 @@ showComments = false
   showDate = true
   showDateUpdated = false
   showAuthor = false
-  showBreadcrumbs = true
+  showBreadcrumbs = tru
   showDraftLabel = true
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false
   showReadingTime = true
-  sharingLinks = ["twitter", "reddit", "linkedin", "email"]
+  sharingLinks = [ ]
   showComments = false
 
 
