@@ -32,3 +32,11 @@ jobs:
       with:
         apiToken: ${{ secrets.CF_API_TOKEN_DEPLOY }}
         workingDirectory: "bundler/tyler-obrien-embedded"
+    - name: Clean up
+      run: ./CloudflareWorkerBundler cleanup
+      working-directory: ./bundler
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN_BUNDLER }}
+        ACCOUNTID: ${{ secrets.ACCOUNTID_BUNDLER }}
+        ACCESSKEY: ${{ secrets.ACCESSKEY_BUNDLER }}
+        SECRETKEY: ${{ secrets.SECRETKEY_BUNDLER }}
