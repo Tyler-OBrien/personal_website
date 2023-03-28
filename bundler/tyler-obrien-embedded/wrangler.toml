@@ -4,7 +4,7 @@ compatibility_date = "2023-03-23"
 account_id = "b9e510810e1e12fcd40826d266a1fb12"
 
 kv_namespaces = [
-  { binding = "KV", id = "c91401bbc81c415e9d18950bc50adf7a", preview_id = "c91401bbc81c415e9d18950bc50adf7a" }
+  { binding = "KV", id = "1ed47f5c6d824bec887985625991ca45", preview_id = "1ed47f5c6d824bec887985625991ca45" }
 ]
 
 r2_buckets = [
