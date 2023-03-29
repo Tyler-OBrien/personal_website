@@ -22,8 +22,9 @@
         {
             "Type": "R2",
             "BucketName": "main-tyler-obrien-website",
-            "BindingName": "R2"
-        },
+            "BindingName": "R2",
+            "CacheSeconds": 3600
+        }
     ],
     "ManifestStorageConfiguration": {
         "Type": "R2",
