@@ -18,9 +18,9 @@ jobs:
     - name: Build
       run: hugo --minify
     - name: change file permissions
-      run: chmod +x bundler/CloudflareWorkerBundler
+      run: chmod +x bundler/CloudflareSuperSites
     - name: Upload
-      run: ./CloudflareWorkerBundler bundle
+      run: ./CloudflareSuperSites bundle
       working-directory: ./bundler
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN_BUNDLER }}
@@ -33,7 +33,7 @@ jobs:
         apiToken: ${{ secrets.CF_API_TOKEN_DEPLOY }}
         workingDirectory: "bundler/tyler-obrien-embedded"
     - name: Clean up
-      run: ./CloudflareWorkerBundler cleanup
+      run: ./CloudflareSuperSites cleanup
       working-directory: ./bundler
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN_BUNDLER }}
