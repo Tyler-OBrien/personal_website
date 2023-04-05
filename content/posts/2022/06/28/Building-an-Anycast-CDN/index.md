@@ -26,25 +26,9 @@ There are various services that you could use to deliver services at low latency
 
 Only some hosts will provide IP Transit (announce your IPs through their transit providers, so the rest of the world can reach you) and offer BGP Sessions. Luckily, there is a super nice community list at https://bgp.services/ that lists Providers, route type, fees, minimum service required, and more.
 
-I ended up going with [Vultr](https://www.vultr.com/) (Operated by Constant), and [BuyVM](https://buyvm.net/) (Operated by Frantech). BuyVM offers IPv4 Anycast for free if you have a VPS purchased in 3 of their locations (NY, Lux, and LV), but server stock is rather limited. Vultr has a ton of locations, but not all support the same transit providers. 
+I ended up going with [Vultr](https://www.vultr.com/) (Operated by Constant), and [BuyVM](https://buyvm.net/) (Operated by Frantech). BuyVM offers IPv4 Anycast for free if you have a VPS purchased in 3 of their locations (NY, Lux, and LV), but server stock is rather limited. Vultr has a ton of locations, with varying upstreams and quality.
 
-The only problem with these two hosts is their upstreams, it seems. Before moving on, it might be worth touching on that.
-
-Big disclaimer, I am not a network professional nor do I have any other real-world experience in BGP or Anycast Networks. However, based on what I've read online and observed, Anycast is difficult. There are a lot of potential routing issues, "scenic" routes where traffic won't flow naturally to the closest node and other issues. BGP Anycast does not know or care about latency or load. As I understand it, exact route preference differs by the network, but generally cares about Administrative distance and the least amount of Autonomous Systems it must go through to reach the target.  For example, a few of Vultr's locations, and one of BuyVM's, have transit via Hurricane Electric (HE) over IPv6, which messes with routing a ton since not all of the other locations support HE, and HE seems to peer with everyone/is often a more preferred route, resulting in messy situations where all of a sudden all requests are routed to the location with HE enabled (i.e Amsterdam, even if connecting from the US).
-
-BGP Communities are supported by both Frantech and BuyVM to not announce to a specific transit partner or peer. We can use them to not announce to HE.
-
-Bird BGP Config, BuyVM, BGP Large Communities
-```
-bgp_large_community.add((53667,109,6939)); # Do not announce to HE
-```
-Bird BGP Config, Vultr, BGP Communities
-```
-bgp_community.add((64600, 6939)); # 6939 Do not announce to Hurricane Electric
-```
-Communities can also be used with specific transit providers to prepend AS or lower preference in specific regions for optimal routing, which I will touch more on later.
-
-I ended up going with Cogent and GTT, as they were available at all locations of both providers, and disabling everything else. If I had to do it again, it seems NTT and Telia are better options (but seemingly more expensive for providers, so fewer have them). Again though, I'm inexperienced in anycast networks and did try to use BGP Communities with HE and a few other providers, but it seems they were either ignored or just didn't help routing, it seems a better idea to just use two quality tier 1 transit providers like NTT/Telia w/ their BGP Communities, then trying to wrangle a ton of transit providers with BGP communities. 
+[Xenyth](https://xenyth.net/) (Canada), [IFog](https://ifog.ch/en) (US, EU, APAC), [Terrahost](https://terrahost.com) (EU & US), and [Misaka](https://www.misaka.io/) (All Regions), are some others I personally use (although not all for the Anycast) and would recommend. If you are wondering who to pick (or start with), I would recommend Vultr. They've got a ton of locations, solid pricing, no bgp fee, stable & fully automated BGP Sessions. 
 
 ### Acquiring an ASN & IP Addresses
 
@@ -52,7 +36,7 @@ Acquiring an Autonomous System Number (ASN) & IP Space can be rather expensive. 
 
 Another advantage of RIPE is that they allow individuals to register, and you don't even have to be in the RIPE region yourself if you have proof of presence (more on that later).
 
-There are several RIPE LIRs, but I picked [Inferno Communications](https://infernocomms.com/lir-services) based on them being recommended in one of the communities I am in (Cloudflare Developers). Getting an ASN through them costs around 54 USD (£45 GBP) one-off and ~$48 USD (£40 GBP) per year for IPv6 /44, which can be split into 16 /48's, the max subnet size that can be announced without being filtered.
+There are several RIPE LIRs, but I picked [Inferno Communications](https://infernocomms.com/lir-services) based on them being recommended in one of the communities I am in (Cloudflare Developers). Getting an ASN through them costs around 54 USD (£45 GBP) one-off and ~$48 USD (£40 GBP) per year for IPv6 /44, which can be split into 16 /48's, the max subnet size that can be announced without being filtered. If you're looking for other providers, I've heard good things about [Cloudie](https://my.cloudie.sh/index.php/store/lir-services) as well as their Discord Community and support.
 
 I created an account in RIPE's Database and created several RIPE objects including an Organization, Contact, and Maintainer.
 
@@ -60,7 +44,7 @@ The ASN Application is really simple, asking you for IDs of the aforementioned R
 
 I had to prove my identity via a third-party service called Yoti, which is required by all RIPE for all individual registrations. Since I am in the US, I also needed an invoice for a resource (i.e VPS, etc) in Europe/RIPE's Jurisdiction to prove my presence in the RIPE Region.
 
-It took around 2 business days to get my Resources allocated to me, AS205398 and 2a0f:85c1:260::/44. I put in another request with the LIR and got maintainer access on my IPv6 address block, and created a route6 entry for Internet Routing Registry (IRR) Filtering. If you use Vultr, they create an IRR entry for you in RADB, but they will remove it if you ever leave them, and some hosts like Virtua Cloud will only allow you to announce prefixes based on IRR entries (Filtering on IRR) but exclude RADB due to supposed abuse.
+It took around 2 business days to get my Resources allocated to me, AS205398 and 2a0f:85c1:260::/44. I put in another request with the LIR and got maintainer access on my IPv6 address block, and created a route6 entry for Internet Routing Registry (IRR) Filtering. If you use Vultr, they create an IRR entry for you in RADB, but they will remove it if you ever leave them, and some hosts like Virtua Cloud will only allow you to announce prefixes based on IRR entries (Filtering on IRR) but exclude RADB.
 
 I set up RPKI as well, as BuyVM/Frantech filter prefixes you are allowed to announce based on valid Route Origin Authorizations (ROAs) for your ASN. Some LIRs have web portals for you to add RPKI entries, but in my case, it just took a quick email with the settings I wanted (Prefix, ASN, max length).
  
