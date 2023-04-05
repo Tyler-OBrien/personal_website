@@ -61,7 +61,7 @@ Next, there needs to be a tool that could be used in a CI/CD Environment like Gi
 
 ![Image of CLI](CLI.png)
 
-{{< customvideo src="https://r2-sharex.chaika.dev/file/2022/05/cli_upload_powershell.mp4" >}}
+{{< customvideo src="cli_upload_powershell.mp4" >}}
 
 One other related problem that had to be solved was handling the SSL/TLS certs themselves. Let's Encrypt (LE) has a rate limit of 5 certs per 24 hours per domain set. To work around this, I just made another simple .NET CLI tool, ran by cron, that would use XCHACHA20-Poly1035 to encrypt the private key and public certs from a single main machine, and other machines would download and decrypt. The encrypted files are stored in CouchDB, and the symmetric encryption key is stored in the file system. This brings us back down to the security level of trusting the file system, which we would be at if we could use Certbot/LE directly.
 
@@ -86,7 +86,7 @@ It's easy to combine all of these metrics and get a nice overview dashboard, as 
 I also used Datadog for remote monitoring of the website and the Authoritative DNS and Sentry for error reporting.
 
 ![Overview dashboard](grafana.png)
-[Bigger picture](https://r2-sharex.chaika.dev/file/2022/05/grafana.png)
+[Bigger picture](grafana.png)
 
 
 ### Finishing Notes
