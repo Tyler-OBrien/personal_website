@@ -20,6 +20,11 @@ jobs:
     - name: Build
       run: hugo --minify
     - name: change file permissions
+      run: chmod +x utils/HugoHtmlRewriter
+    - name: Rewrite async/defer
+      run: utils/HugoHtmlRewriter
+      working-directory: ./public
+    - name: change file permissions
       run: chmod +x utils/CouchDB-Pages-Uploader
     - name: Upload
       run: utils/CouchDB-Pages-Uploader
