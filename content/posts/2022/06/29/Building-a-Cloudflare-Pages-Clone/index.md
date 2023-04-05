@@ -11,7 +11,7 @@ summary: "Building a Cloudflare/Github Pages clone self-hostable using CouchDB. 
 
 Github Pages, or Cloudflare Pages, are both great offerings for static sites that offer good integration with CI/CD and good performance. Cloudflare Pages specifically is built on top of Cloudflare's Workers KV Store, allowing your website, if popular enough, to exist in every one of Cloudflare's 350+ Datacenters, all for free.
 
-To replicate this functionality, I needed some technology or database that was made for cross datacenter or cross region replication, could store files and was multi-master. I ended up going with CouchDB, a NoSQL Eventually Consistent Database, with its powerful HTTP API, and simple HTTP-based replication that could deal with latency or even outages of replication targets gracefully. CouchDB supported Attachments as a way to store files, but it was only made for documents of 8 MB or so in size. Cloudflare Pages, or more specifically Cloudflare Workers KV, which is what Cloudflare Pages uses, only supports files of up to 25 MB, so I decided this was an acceptable trade-off.
+To replicate this functionality, I needed some technology or database that was made for cross datacenter or cross region replication, could store files and was multi-master. I ended up going with CouchDB, a NoSQL Eventually Consistent Database, with its powerful HTTP API, and simple HTTP-based replication that could deal with latency or even outages of replication targets gracefully. CouchDB supported Attachments as a way to store files, but it was only made for documents of 8 MB or so in size. Cloudflare Pages only supports files of up to 25 MB, so I decided this was an acceptable trade-off.
 
 Looking back on this now, I could have gone with any database for metadata and SeaweedFS for the file layer, or any other generic file replication layer. Having it all in CouchDB did make things easier though.
 
@@ -49,9 +49,10 @@ To replicate the core functionality of Cloudflare Pages, I needed a few separate
 
 The core, or main web server, needs to serve the actual files, allowing previews, and also handling new deployments.
 
-To solve that problem, I took a page out of Cloudflare Pages's book and used manifests for each hostname. Manifests are stored as CouchDB Documents, with their IDs being the hostname, and containing a dictionary to link files (images/example.png) to their actual file ID, which was just a sha256 hash of the file contents. Each file was stored in a separate CouchDB Database, with its ID being the sha256 hash of its file contents, and itself being a CouchDB Attachment. CouchDB offered a few other helpful features by it storing and returning content type and eTags, which we could use in the response.
+To solve that problem, I create and use manifests for each hostname. Manifests are stored as CouchDB Documents, with their IDs being the hostname, and containing a dictionary to link files (images/example.png) to their actual file ID, which was just a sha256 hash of the file contents. Each file was stored in a separate CouchDB Database, with its ID being the sha256 hash of its file contents, and itself being a CouchDB Attachment. CouchDB offered a few other helpful features by it storing and returning content type and eTags, which we could use in the response.
 
 ![Sequence Diagram of Request](mermaid-diagram-2022-06-28-205108.png)
+* The domain is now tobrien.dev
 
 
 ### CLI Tool
@@ -97,3 +98,5 @@ The PowerDNS Remote Backend for CouchDB is at https://github.com/Tyler-OBrien/Po
 This website with automatic deployments via CouchDB Pages can be found at https://github.com/Tyler-OBrien/Personal-Website-CouchDB-Pages
 
 Building this was fun, CouchDB is graceful with its setup and responses, and is fun to build around. Continuous Delivery/Integration can be set up [quite easily](https://github.com/Tyler-OBrien/Personal-Website-CouchDB-Pages/blob/master/.github/workflows/couchdb_deploy.yml) with the CLI tool.  This setup has a surprisingly small footprint. The only thing I worry about is the loss of one location causing regional issues that would be hard to verify, Datadog helps a bit with its many locations, but not entirely.
+
+Update: tobrien.dev is now the home of this, instead of tobrien.me.
