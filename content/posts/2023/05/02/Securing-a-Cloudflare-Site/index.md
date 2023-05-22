@@ -7,15 +7,12 @@ showComments: true
 showSummary: true
 summary: "How to secure your origin server behind Cloudflare"
 ---
-{{< alert >}}
-This post is a draft and not finalized yet
-{{< /alert >}}
 
 Cloudflare is used by some [20% of the web](https://w3techs.com/technologies/details/cn-cloudflare), primarily known for its Pull Content Delivery Network Service. Cloudflare offers extensive security tools but if you do not configure your origin web server (the one behind Cloudflare!) correctly, this all becomes useless.
 
 [Cloudflare](https://developers.cloudflare.com/fundamentals/get-started/task-guides/origin-health/pro/) and many others have guides on securing your origin, but I found most of them gloss over Authenticated Origin Pulls or discussing entire setups.
 
-Cloudflare and other CDNs can seem magical, but it's important to remember fundamentally it's just an intelligent reverse proxy, turning around and requesting from your real origin when needed. It does nothing to the security of your origin itself, and without configuration, it is easy to find the real origin and circumvent Cloudflare entirely.
+Cloudflare and other CDNs can seem magical, but it's important to remember fundamentally it's just an intelligent reverse proxy, turning around and requesting from your real origin when needed. It does nothing to the security of your origin itself, and without further configuration, it is easy to find the real origin and circumvent Cloudflare entirely.
 
 
 ### Prerequisites
