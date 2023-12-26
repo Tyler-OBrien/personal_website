@@ -4,10 +4,9 @@ description = ""
 
 [author]
 name = "Tyler O'Brien"
-headline = "Student"
+headline = "Developer"
 image = "avatar.png"
 bio = "Mostly focused on backend development, trying to keep up with the latest technologies."
   links = [
-    { linkedin = "https://linkedin.com/in/Tyler-Obrien-cs" },
-    { github = "https://github.com/Tyler-OBrien" },
+    { github = "https://github.com/Tyler-OBrien" }
   ]
