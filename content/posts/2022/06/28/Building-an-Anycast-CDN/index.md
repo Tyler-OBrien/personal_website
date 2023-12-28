@@ -2,11 +2,15 @@
 title: "Building an Anycast network for fun"
 slug: Building-An-Anycast-CDN
 date: 2022-06-28
+Lastmod: 2023-04-04
 draft: false
 showTableOfContents: true
+showDate: true
+showDateUpdated: false
 showComments: true
 showSummary: true
 summary: "Looking into how to build an Anycast Network on a budget, and optimizing Anycast routing."
+tags: ["Cloudflare", "Self-Hosting",  "BGP", "Anycast", "Networking"]
 ---
 
 Cloudflare is expanding at a rapid pace, with more and more offerings built upon their Anycast Network.

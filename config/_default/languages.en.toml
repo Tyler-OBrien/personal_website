@@ -1,12 +1,20 @@
+
+languageCode = "en"
+languageName = "English"
+languageDirection = "ltr"
+weight = 1
+
 title = "Tyler O'Brien"
-description = ""
-
-
+[params]
+  dateFormat = "2 January 2006"
+  description = ""
+[params.author]
+  name = "Tyler O'Brien"
 [author]
-name = "Tyler O'Brien"
-headline = "Developer"
-image = "avatar.png"
-bio = "Mostly focused on backend development, trying to keep up with the latest technologies."
+  headline = "Developer"
+  image = "avatar.png"
+  bio = "Mostly focused on backend development, trying to keep up with the latest technologies."
   links = [
-    { github = "https://github.com/Tyler-OBrien" }
-  ]
+      { email = "mailto:me@tylerobrien.dev" },
+      { github = "https://github.com/Tyler-OBrien" }
+    ]

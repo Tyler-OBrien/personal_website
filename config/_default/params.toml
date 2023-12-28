@@ -1,10 +1,15 @@
-#colorScheme = "ocean"
+colorScheme = "Sapphire"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 showThemeAttribution = false
 enableSearch = true
 enableCodeCopy = true
+enableImageLazyLoading = true
+
 showComments = false
+
+fingerprintAlgorithm = "sha256"
+
 
 [header]
   layout = "basic" # valid options: basic, hamburger, custom
@@ -17,6 +22,7 @@ showComments = false
 [homepage]
   layout = "profile" 
   showRecent = true
+  recentLimit = 5
 
 [article]
   showDate = true
@@ -30,6 +36,18 @@ showComments = false
   showReadingTime = true
   sharingLinks = [ ]
   showComments = false
+
+
+[list]
+  showBreadcrumbs = false
+  showSummary = false
+  showTableOfContents = false
+  showTaxonomies = false
+  groupByYear = true
+  paginationWidth = 1
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
 
 
 

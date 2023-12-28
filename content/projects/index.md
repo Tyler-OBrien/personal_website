@@ -1,14 +1,17 @@
 ---
 title: "Projects"
 description: "List of my projects"
-showDate: false
-showDateUpdated: false
+showDate: true
+showDateUpdated: true
 showReadingTime: false
 showTableOfContents: true
 sharingLinks: false
 layout: "simple"
 summary: "My Projects"
 date: 2022-06-28
+Lastmod: 2023-12-27
+sitemap:
+  changeFreq: monthly
 ---
 
 
@@ -17,8 +20,10 @@ Scan and store metrics on Servers for various Steam games, using the Steam Serve
 Using a custom server query library to use a single UDP Socket for each scan.<br>
 Around 100 million server queries per day are made against 200k unique servers. All scan results stored in ClickHouse with no sampling.<br>
 
+
 ### [CouchDB Pages](https://github.com/Tyler-OBrien/CouchDB-Pages) | [tobrien.dev](https://tobrien.dev)
 Self-hosted CouchDB version of Github/Cloudflare Pages <br>
+
 
 ### [PowerDNS Authoritative CouchDB Backend](https://github.com/Tyler-OBrien/PowerDNS-Authoritative-CouchDB-Backend) | [tobrien.dev](https://tobrien.dev)
 A PowerDNS Authoritative Backend using CouchDB (intended for use with multiple regions, using CouchDB Replication) <br>

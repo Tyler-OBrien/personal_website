@@ -2,10 +2,14 @@
 title: "Securing a Cloudflare Site"
 slug: Securing-a-Cloudflare-Site
 date: 2023-05-02
+Lastmod: 2023-05-21
 showTableOfContents: true
+showDate: true
+showDateUpdated: false
 showComments: true
 showSummary: true
 summary: "How to secure your origin server behind Cloudflare"
+tags: ["Cloudflare", "Security"]
 ---
 
 Cloudflare is used by some [20% of the web](https://w3techs.com/technologies/details/cn-cloudflare), primarily known for its Pull Content Delivery Network Service. Cloudflare offers extensive security tools but if you do not configure your origin web server (the one behind Cloudflare!) correctly, this all becomes useless.

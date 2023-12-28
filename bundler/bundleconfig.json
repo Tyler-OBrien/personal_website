@@ -9,7 +9,8 @@
             "AllowedFileExtensions": [
                 "html",
                 "css",
-                "js"
+                "js",
+                "csv"
             ],
             "FileSizeLimit": 200000
         },

@@ -2,11 +2,16 @@
 title: "Building a Cloudflare Pages Clone (\"CouchDB Pages\")"
 slug: Building-A-Cloudflare-Pages-Clone
 date: 2022-06-29
+Lastmod: 2023-04-04
 draft: false
 showTableOfContents: true
 showComments: true
 showSummary: true
+showDate: true
+showDateUpdated: false
 summary: "Building a Cloudflare/Github Pages clone self-hostable using CouchDB. Including Authoritative DNS, Wireguard Private VLAN, and Prometheus/Grafana Monitoring."
+tags: ["Cloudflare", "Self-Hosting",  "CouchDB", "Wireguard", "Grafana"]
+
 ---
 
 Github Pages, or Cloudflare Pages, are both great offerings for static sites that offer good integration with CI/CD and good performance. Cloudflare Pages specifically is built on top of Cloudflare's Workers KV Store, allowing your website, if popular enough, to exist in every one of Cloudflare's 350+ Datacenters, all for free.
