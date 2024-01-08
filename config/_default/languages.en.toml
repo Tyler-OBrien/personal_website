@@ -15,6 +15,5 @@ title = "Tyler O'Brien"
   image = "avatar.png"
   bio = "Mostly focused on backend development, trying to keep up with the latest technologies."
   links = [
-      { email = "mailto:me@tylerobrien.dev" },
       { github = "https://github.com/Tyler-OBrien" }
     ]
