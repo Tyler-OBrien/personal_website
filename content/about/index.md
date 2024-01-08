@@ -21,3 +21,5 @@ You can read more about some of my [Projects]({{< ref "/projects" >}} "My Projec
 You can find a self-hosted non-cloudflare copy of this site at [tobrien.dev](https://tobrien.dev). Original Cloudflare powered at [tylerobrien.dev](https://tylerobrien.dev)
 
 This website was build using [Hugo](https://gohugo.io/), and [Congo](https://git.io/hugo-congo), a Hugo theme.
+
+You can reach me at tyler @ this site.
