@@ -5,8 +5,7 @@
     "MaxManifestCount": 3,
     "StorageConfigurations": [
         {
-            "Type": "Embedded",
-            "FileSizeLimit": 200000
+            "Type": "Embedded"
         },
         {
             "Type": "KV",
