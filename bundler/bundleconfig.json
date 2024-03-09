@@ -6,12 +6,6 @@
     "StorageConfigurations": [
         {
             "Type": "Embedded",
-            "AllowedFileExtensions": [
-                "html",
-                "css",
-                "js",
-                "csv"
-            ],
             "FileSizeLimit": 200000
         },
         {
