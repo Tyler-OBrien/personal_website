@@ -6,7 +6,13 @@
     "StorageConfigurations": [
         {
             "Type": "Embedded",
-            "FileSizeLimit": 100000
+            "FileSizeLimit": 100000,
+            "AllowedFileExtensions": [
+                "html",
+                "css",
+                "js",
+                "csv"
+            ]
         },
         {
             "Type": "KV",
