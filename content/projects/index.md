@@ -13,7 +13,11 @@ Lastmod: 2023-12-27
 sitemap:
   changeFreq: monthly
 ---
-
+### [Action Delay API](https://github.com/Tyler-OBrien/Action-Delay-API) |  [Current Cloudflare Delay Status - all.cloudflare.chaika.me](https://all.cloudflare.chaika.me/)
+Monitoring the delay of various Cloudflare Update Actions such as Deployed Workers being served updated on Edge, DNS Updates, Rule Updates and more. <br>
+Monitoring from over 25+ locations to ensure the update is globally visible. <br>
+4 Million+ DNS and HTTP Requests from all nodes per day to accurately monitor, with over 400k unique per location delay job results daily. <br>All delay results stored in ClickHouse with no sampling, and status live updated.<br><br>
+*New* Cloudflare Workers AI Monitoring, automatically testing every single Workers AI Model over 300k times per day to assess Workers AI Stability and Performance<br>
 
 ### [Uncore Metrics](https://github.com/Tyler-OBrien/UncoreMetrics) |  [uncore.app](https://uncore.app)
 Scan and store metrics on Servers for various Steam games, using the Steam Server Query Protocol. <br>
