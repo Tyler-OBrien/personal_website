@@ -1,4 +1,3 @@
-2a06:a005:b6b::/48,US,US-KS,Kansas City,64161
 2a06:a005:b6c::/48,DE,DE-BE,Berlin,12103
 2a0f:85c1:261::/48,US,US-NY,Staten Island,10311
 2a0f:85c1:262::/48,LU,LU-ES,Bettembourg,3290
@@ -7,10 +6,14 @@
 2a0f:85c1:265::/48,CL,CL-RM,Santiago,8710067
 2a0f:85c1:266::/48,GB,GB-LND,London,E1 6QR
 2a0f:85c1:267::/48,SG,SG-05,Singapore,139963
-2a0f:85c1:268::/48,CA,CA-ON,Toronto,M5A0G7
+2a0f:85c1:268::/48,IT,IT-MI,Milano,20153
 2a0f:85c1:269::/48,IN,IN-MH,Mumbai,400072
-2a0f:85c1:26a::/48,US,US-VA,Ashburn,20147
+2a0f:85c1:26a::/48,JP,JP-13,Shinagawa,142-0002
 2a0f:85c1:26b::/48,AU,AU-NSW,Sydney,2015
-2a0f:85c1:26c::/48,JP,JP-13,Shinagawa,142-0002
+2a0f:85c1:26c::/48,IL,IL-TA,Rosh HaAyin,4809139
 2a0f:85c1:26d::/48,ZA,ZA-GP,Isando Gauteng,1600
-2a0f:85c1:26e::/48,US,US-WA,Liberty Lake,99019
+2a0f:85c1:26e::/48,NL,NL-FL,Dronten,8253
+2a0f:85c1:26f::/48,US,US-WA,Liberty Lake,99019
+2a0a:6044:ae00::/48,CA,CA-ON,Toronto,M5A0G7
+2a0a:6044:ae01::/48,BR,BR-SP,Osasco,06268-120
+2a0a:6044:ae02::/48,JP,JP-27,Osaka,540-0001
