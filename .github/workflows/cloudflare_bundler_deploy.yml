@@ -8,10 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       name: Checkout Repository
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
+      uses: peaceiris/actions-hugo@v3
       with:
         hugo-version: 'latest'
         extended: true
@@ -33,10 +33,11 @@ jobs:
         ACCESSKEY: ${{ secrets.ACCESSKEY_BUNDLER }}
         SECRETKEY: ${{ secrets.SECRETKEY_BUNDLER }}
     - name: Publish
-      uses: cloudflare/wrangler-action@2.0.0
+      uses: cloudflare/wrangler-action@v3
       with:
         apiToken: ${{ secrets.CF_API_TOKEN_DEPLOY }}
         workingDirectory: "bundler/tyler-obrien-embedded"
+        wranglerVersion: "3.69.1"
     - name: Clean up
       run: ./CloudflareSuperSites cleanup
       working-directory: ./bundler
