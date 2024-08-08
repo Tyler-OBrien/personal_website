@@ -10,9 +10,9 @@ title = "Tyler O'Brien"
   description = ""
 [params.author]
   name = "Tyler O'Brien"
-  headline = "Developer"
+  headline = "Software Developer"
   image = "avatar.png"
-  bio = "Mostly focused on backend development, trying to keep up with the latest technologies."
+  bio = "Mostly focused on backend development, trying to keep up with the latest technologies!"
   links = [
       { github = "https://github.com/Tyler-OBrien" }
     ]

@@ -16,6 +16,8 @@ sitemap:
 
 Hi! I'm Tyler O'Brien, a developer located in the Upstate New York region. I'm currently interested in Clickhouse and Cloudflare's ecosystem, including Workers, D1, Durable Objects, Workers Analytics Engine, and more. I primarily use C# and JS/TS.
 
+Lately I've been into working with Azure's Cloud Offerings (Blob Storage, SQL Server, App Services, Functions), Delivering Desktop Applications, and PDFs (Optimization, Management, etc, not of my own free will).
+
 You can read more about some of my [Projects]({{< ref "/projects" >}} "My Projects"), and [blog posts]({{< ref "/posts" >}} "My Blog Posts").
 
 You can find a self-hosted non-cloudflare copy of this site at [tobrien.dev](https://tobrien.dev). Original Cloudflare powered at [tylerobrien.dev](https://tylerobrien.dev)
