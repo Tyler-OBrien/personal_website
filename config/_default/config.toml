@@ -2,8 +2,11 @@ languageCode = "en"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
-paginate = 10
 summaryLength = 0
+
+
+[pagination]
+  pagerSize = 15
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
