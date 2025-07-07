@@ -1,0 +1,3 @@
+<p id="uncoreStats"></p>
+{{ $jsUncoreStats := resources.Get "js/uncoreStats.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script defer type="text/javascript" src="{{ $jsUncoreStats.RelPermalink }}" integrity="{{ $jsUncoreStats.Data.Integrity }}"></script>

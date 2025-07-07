@@ -1,0 +1,3 @@
+<p id="adpStats"></p>
+{{ $jsAdpStats := resources.Get "js/adpStats.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script defer type="text/javascript" src="{{ $jsAdpStats.RelPermalink }}" integrity="{{ $jsAdpStats.Data.Integrity }}"></script>
