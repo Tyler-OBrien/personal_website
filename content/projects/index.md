@@ -16,8 +16,8 @@ sitemap:
 ### [Action Delay API](https://github.com/Tyler-OBrien/Action-Delay-API) |  [Current Status  - delay.chaika.me](https://delay.chaika.me/status/) 
 #### {{< adpStats >}} 
 Monitoring the delay of various Cloudflare Update Actions such as Updated Workers from update time to being deployed on most edges, DNS Updates, Rule Updates and more. <br>
-10 Million+ DNS and HTTP Requests from all nodes per day to accurately monitor, with over 800k unique per location delay job results daily. <br><br>
-Postgres stores the live status and ClickHouse stores all historical results with no sampling. We use NATS Request-Reply for the edge requests to the 46+ remote locations. Live Status Updating uses SignalR. We have three core nodes (Portland, Amsterdam, Singapore) setup primary-replica with Portland being the primary. All locations host the API, and all data is replicated in real time to replicas. All Cloudflare Jobs are orchestrated out of Portland, all Bunny Jobs are out of Amsterdam. We use Cloudflare Load Balancer and Bunny Smart Records to redirect all requests to the closest core region.<br><br>
+10 Million+ DNS and HTTP Requests from all nodes per day to accurately monitor propagation and global performance. <br><br>
+Postgres stores the live status and ClickHouse stores all historical results with no sampling. We use NATS Request-Reply for the edge requests to the 46+ remote locations. Live Status Updating uses SignalR. All data is replicated to three geo-redundant locations: Portland (primary) Amsterdam, Singapore, with API Requests routed to the closest. Cloudflare Jobs are orchestrated from the East Coast, Bunny.net Jobs in Amsterdam. <br><br>
 *New* - Also monitoring Bunny, monitoring page hosted using Bunny Edge Scripts, Edge Storage and Smart Records for backend load balancing - https://delay.bunny.chaika.me/status<br>
 
 ### [Uncore Metrics](https://github.com/Tyler-OBrien/UncoreMetrics) |  [uncore.app](https://uncore.app)
