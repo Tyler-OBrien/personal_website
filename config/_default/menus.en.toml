@@ -6,6 +6,13 @@
   weight = 10
 
 [[main]]
+  name = "Tools"
+  pageRef = "tools"
+  url = "/tools"
+  weight = 20
+
+
+[[main]]
   name = "Projects"
   pageRef = "projects"
   url = "/projects"

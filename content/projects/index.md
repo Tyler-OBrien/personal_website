@@ -9,7 +9,7 @@ sharingLinks: false
 layout: "simple"
 summary: "My Projects"
 date: 2022-06-28
-Lastmod: 2025-07-06
+Lastmod: 2025-09-13
 sitemap:
   changeFreq: monthly
 ---
@@ -28,7 +28,7 @@ Using a custom server query library to use a single UDP Socket for each scan.<br
 
 
 ### [CouchDB Pages](https://github.com/Tyler-OBrien/CouchDB-Pages) | [tobrien.dev](https://tobrien.dev)
-Self-hosted CouchDB version of Github/Cloudflare Pages.<br>
+Self-hosted CouchDB version of Github/Cloudflare Pages. Versioned Deployments with preview links, CI/CD Integration, made for multi-region deployment using CouchDB Replication and BGP Anycast/GeoDNS to direct traffic.<br>
 
 
 ### [Cloudflare SuperSites](https://github.com/Tyler-OBrien/SuperSites) | [tylerobrien.dev](https://tylerobrien.dev)

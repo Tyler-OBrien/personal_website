@@ -16,7 +16,7 @@ sitemap:
 
 Hi! I'm Tyler O'Brien, a developer located in the Upstate New York region. I'm currently interested in Clickhouse and Cloudflare's ecosystem, including Workers, D1, Durable Objects, Workers Analytics Engine, and more. I primarily use C# and JS/TS.
 
-Lately I've been into working with self-hosted full stack apps (Astro w/ Preact and ASP.NET Core using Postgres, Clickhouse, and NATS) Azure's Cloud Offerings (Blob Storage, SQL Server, Container Apps, Front Door)
+Lately I've been into working with self-hosted full stack apps (Astro w/ Preact and ASP.NET Core using Postgres, Clickhouse, and NATS), ZSTDing everything and Azure's Cloud Offerings (Blob Storage, SQL Server, Container Apps, Front Door)
 
 You can read more about some of my [Projects]({{< ref "/projects" >}} "My Projects"), and [blog posts]({{< ref "/posts" >}} "My Blog Posts").
 
