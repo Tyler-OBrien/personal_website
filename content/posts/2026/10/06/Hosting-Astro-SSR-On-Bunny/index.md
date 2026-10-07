@@ -31,19 +31,7 @@ I build the Astro SSR site using the Deno adapter and esbuild to bundle it into 
 
 The API/data comes from a self-hosted cluster of Virtual Servers by different providers, for independence from any monitored infrastructure. I use Bunny DNS’s built in latency routing on a CDN Accelerated zone to route requests to the lowest-latency healthy server, with Burrow Smart Routing accelerating the origin path. I also utilize Bunny’s support of WebSockets for real-time data updates.
 
-{{< mermaid >}}
-flowchart TD
-Visitor[Visitor] --> CDN["delay.bunny.chaika.me Pull Zone"]
-CDN -->|Static assets| Storage[Bunny Storage]
-CDN -->|Page request: Edge Rule| Script[Astro SSR Edge Script]
-Visitor -->|Browser API requests| API["api.bunny.chaika.me Pull Zone - CDN Accelerated"]
-Script -->|SSR API requests| API
-API --> DNS[Bunny DNS latency routing]
-DNS -->|Select a healthy nearby origin| Accelerated[Burrow Smart Routing]
-Accelerated --> Origins[Self-hosted API servers across providers]
-Checks[Bunny DNS health checks] -.->|Monitor availability| Origins
-Checks -.->|Feed origin status| DNS
-{{< /mermaid >}}
+![Routing through Bunny Pull Zones, Astro SSR Edge Scripting, DNS latency routing, Burrow, and self-hosted API servers](routing-diagram.svg)
 
 ![Bunny DNS latency routing configuration with healthy servers in Seattle, Amsterdam, and Singapore](Bunny-DNS-Setup.webp)
 
