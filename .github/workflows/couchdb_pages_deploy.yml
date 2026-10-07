@@ -18,7 +18,7 @@ jobs:
         hugo-version: 'latest'
         extended: true
     - name: Build
-      run: hugo --minify
+      run: hugo --minify --baseURL https://tobrien.dev/
     - name: change file permissions
       run: chmod +x utils/HugoHtmlRewriter
     - name: Rewrite async/defer
