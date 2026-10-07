@@ -1,4 +1,5 @@
-languageCode = "en"
+locale = "en"
+baseURL = "https://tylerobrien.dev/"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true

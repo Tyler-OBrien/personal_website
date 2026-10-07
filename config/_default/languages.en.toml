@@ -1,7 +1,7 @@
 
-languageCode = "en"
-languageName = "English"
-languageDirection = "ltr"
+locale = "en"
+label = "English"
+direction = "ltr"
 weight = 1
 
 title = "Tyler O'Brien"
