@@ -53,7 +53,7 @@ In my tests, even ssr fetching uncached data was fast world-wide, thanks to Edge
 
 ![World map showing response times from monitoring locations around the world](World-Wide-Latency.webp)
 
-At low/moderate traffic, the Bunny usage charges are pennies a month for a full Edge SSR website and load balancing/DDoS protection for the API & data. I’ve been running this setup since May of 2025 without any issues or worries about ssr servers!
+At low/moderate traffic, the Bunny usage charges are pennies a month for a full Edge SSR website and load balancing/DDoS protection for the API & data requests. I’ve been running this setup since May of 2025 without any issues or worries about ssr servers!
 
 The website is hosted at https://delay.bunny.chaika.me!
 
