@@ -23,19 +23,19 @@ I see these monitoring projects as a fun way to learn the platform. Another way 
 
 Bunny has all the pieces you need for Edge SSR with Edge Scripting based on Deno and Edge Storage, although without framework support yet. They’re working on [an Astro adapter](https://github.com/BunnyWay/bunny-adapters) but it’s currently not ready for production.
 
-I build the Astro SSR site using the Deno adapter and using esbuild to bundle into a single js file, and then making one small surgical change to use Bunny.v1.serve (Bunny’s own http handler hook) rather than Deno.serve, lets me deploy the SSR part as an Edge Script. I use a Bunny Edge Rule, sending requests without a file extension to the SSR Edge Script, and the rest to a fast replicated SSD Storage zone holding the website assets. Some simple scripts handle this deployment mostly seamlessly.
+I build the Astro SSR site using the Deno adapter and esbuild to bundle it into a single js file, then make a few small changes to the bundle, primarily using Bunny.v1.serve (Bunny’s own http handler hook) rather than Deno.serve. That lets me deploy the SSR part as an Edge Script. I use a Bunny Edge Rule, sending requests without a file extension to the SSR Edge Script, and the rest to a fast replicated SSD Storage zone holding the website assets. Some simple scripts handle this deployment mostly seamlessly.
 
 The API/data comes from a self-hosted cluster of Virtual Servers by different providers, for independence from any monitored infrastructure. I use Bunny DNS’s built in latency routing on a CDN Accelerated zone to route requests to the lowest-latency healthy server, with Burrow Smart Routing accelerating the origin path. I also utilize Bunny’s support of WebSockets for real-time data updates.
 
 {{< mermaid >}}
 flowchart TD
-Visitor[Visitor] --> CDN[Bunny Pull Zone]
+Visitor[Visitor] --> CDN["delay.bunny.chaika.me Pull Zone"]
 CDN -->|Static assets| Storage[Bunny Storage]
 CDN -->|Page request: Edge Rule| Script[Astro SSR Edge Script]
-Visitor -->|Browser API requests| API[api.bunny.chaika.me]
+Visitor -->|Browser API requests| API["api.bunny.chaika.me Pull Zone - CDN Accelerated"]
 Script -->|SSR API requests| API
 API --> DNS[Bunny DNS latency routing]
-DNS -->|Select a healthy nearby origin| Accelerated[CDN Accelerated API zone and Burrow]
+DNS -->|Select a healthy nearby origin| Accelerated[Burrow Smart Routing]
 Accelerated --> Origins[Self-hosted API servers across providers]
 Checks[Bunny DNS health checks] -.->|Monitor availability| Origins
 Checks -.->|Feed origin status| DNS
@@ -50,3 +50,5 @@ In my tests, even ssr fetching uncached data was responsive across the sampled l
 At low/moderate traffic, the Bunny usage charges are pennies a month for a full Edge SSR website and load balancing/DDoS protection for the API & data. I’ve been running this setup since May of 2025 without any issues or worries about ssr servers!
 
 The website is hosted at https://delay.bunny.chaika.me!
+
+The project is open source on [GitHub](https://github.com/Tyler-OBrien/Action-Delay-API), including the [Bunny Astro setup](https://github.com/Tyler-OBrien/Action-Delay-API/tree/main/website/Action-Delay-API-website-bunny).
