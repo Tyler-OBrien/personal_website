@@ -19,11 +19,15 @@ I like monitoring services and getting some understanding of how long it takes f
 
 ![Action Delay API dashboard showing live status and delay measurements for Bunny systems](Website-overview.webp)
 
+## Hosting Astro SSR on Bunny
+
 I see these monitoring projects as a fun way to learn the platform. Another way is hosting the data viewing website on the said monitored platform. It’s a simple Astro SSR website originally hosted on Cloudflare Workers.
 
 Bunny has all the pieces you need for Edge SSR with Edge Scripting based on Deno and Edge Storage, although without framework support yet. They’re working on [an Astro adapter](https://github.com/BunnyWay/bunny-adapters) but it’s currently not ready for production.
 
 I build the Astro SSR site using the Deno adapter and esbuild to bundle it into a single js file, then make a few small changes to the bundle, primarily using Bunny.v1.serve (Bunny’s own http handler hook) rather than Deno.serve. That lets me deploy the SSR part as an Edge Script. I use a Bunny Edge Rule, sending requests without a file extension to the SSR Edge Script, and the rest to a fast replicated SSD Storage zone holding the website assets. Some simple scripts handle this deployment mostly seamlessly.
+
+## Routing the API
 
 The API/data comes from a self-hosted cluster of Virtual Servers by different providers, for independence from any monitored infrastructure. I use Bunny DNS’s built in latency routing on a CDN Accelerated zone to route requests to the lowest-latency healthy server, with Burrow Smart Routing accelerating the origin path. I also utilize Bunny’s support of WebSockets for real-time data updates.
 
@@ -43,7 +47,9 @@ Checks -.->|Feed origin status| DNS
 
 ![Bunny DNS latency routing configuration with healthy servers in Seattle, Amsterdam, and Singapore](Bunny-DNS-Setup.webp)
 
-In my tests, even ssr fetching uncached data was responsive across the sampled locations, thanks to Edge Scripting’s many supported locations alongside Burrow Smart Routing.
+## Performance and cost
+
+In my tests, even ssr fetching uncached data was fast world-wide, thanks to Edge Scripting’s many supported locations alongside Burrow Smart Routing.
 
 ![World map showing response times from monitoring locations around the world](World-Wide-Latency.webp)
 
